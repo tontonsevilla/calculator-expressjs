@@ -7,5 +7,9 @@ app.listen(port, function(e) {
 });
 
 app.get("/", function(req, res) {
-  res.send('Hello World');
-})
+  res.sendFile(__dirname + '/index.html');
+});
+
+app.post("/", function(req, res) {
+  res.send('Thank you for posting.');
+});
